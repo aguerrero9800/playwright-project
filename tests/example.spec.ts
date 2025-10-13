@@ -20,7 +20,7 @@ test('get started link', async ({ page }) => {
 test('test', async ({ page }) => {
 
   await page.goto('https://www.mercadolibre.com.ar/');
-  await page.locator ('input[id=cb1-edit]').fill('Iphone')
+  await page.locator("#cb1-edit").fill('iphone');
   await page.keyboard.press('Enter')
 
   await expect(page.locator('//ol[contains( @class, \'ui-search-layout\')]')).toBeVisible()
